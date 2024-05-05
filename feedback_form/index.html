@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            
+            /* background-color: rgba(172, 102, 102, 0); */
+          
+
+            background-image: radial-gradient(rgb(214, 214, 214), #f5141a);
+
+            
+        }
+
+
+
+        
+        #feedback_form{
+        
+            width: 650px;
+            height: 90vh;
+            border: 1px solid black;
+            margin-left: 35%;
+            margin-top: 30px;
+            border-radius: 10px;
+            padding-left: 20px;
+            /* padding-bottom: 10px; */
+            background-color: #f4f4f4;
+
+        }
+
+        h1{
+            justify-content: center;
+            text-align: center;
+            font-style: normal;
+            font-size: 35px;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        form{
+
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 550;
+            padding-top: 15px;
+            padding-left: 10px;
+            /* align-items: center;
+            justify-content: center;            */
+
+
+        }
+
+
+    
+        #feedback_type{
+            width: 90%;
+            height: 40px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+            padding-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        #rating_1 div {
+           display: inline;
+          
+        }
+
+        #rating_1{
+           
+            margin-bottom: 20px;
+        }
+     
+
+       #text input{
+      
+            width: 90%;
+            height: 30px;
+           font-size: 20px;
+           margin-bottom: 30px;
+           padding-bottom: 10px;
+           border-radius: 5px;
+           justify-content: center;
+        
+           padding-bottom: 3px;
+
+        }
+
+        #text label{
+            margin-top: 10px;
+            padding-top: 10px;
+            font-size: 20px;
+        }
+
+
+
+
+        textarea{
+            width: 90%;
+            height: 70px;
+            font-size: 20px;
+           border-radius: 5px;
+            margin-bottom: 20px;
+           padding-bottom: 10px;
+
+        }
+
+        button{
+            width: 100px;
+            height: 50px;
+            border-radius: 5px;
+            font-size: 20px;
+            margin-top: 20px;
+            margin-left: 45%;
+            color: white;
+            background-color: green;
+        }
+
+       
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="feedback_form">
+        <h1>Feedback Form</h1>
+        <form action="feedback">
+            <label for="type">Feedback Type:</label>
+            <div>
+            <select name="type" id="feedback_type">
+                <option value="compliments">compliments</option>
+                <option value="performance">performance</option>
+                <option value="Lecture">Lecture</option>
+                <option value="Feeling">Feeling</option>
+            </select>
+            </div>
+
+                
+            <label for="message">Message:</label>    
+          <div>  <textarea name="message" id="message" ></textarea></div>
+
+
+           
+          <div id="rating_1">
+
+            <label for="rat">Webside Rating:</label>
+            <br/>
+             <div>
+                <input type="radio" name="rat" id="Excellent" checked />
+                <lable for="Excellent">Excellent</lable>
+            </div>
+            <div>
+                <input type="radio" name="rat" id="good" />
+                <lable for="good">Good</lable>
+            </div>
+            <div>
+                <input type="radio" name="rat" id="average" /> 
+                <lable for="average">Average</lable>
+            </div>
+            <div>
+                <input type="radio" name="rat" id="poor" />
+                <lable for="poor">Poor</lable>
+            </div>
+           
+
+          </div>
+            
+          
+
+        
+
+          <div id="text">
+
+            <label for="number" >age (10-100):</label>    
+            <div><input type="number" name="number" required min="10" max="100" ></div>
+
+
+            <label for="message" >Email :</label>    
+            <div><input type="email" required></div>
+
+            <label for="password" >Password (min. 8 characters):</label>    
+            <div><input type="password" min='8' required ></div>
+
+            <label for="url">Webside URL (optional):</label>    
+            <div><input type="url" required></div>
+
+          </div>
+            
+            <input type="checkbox" required>
+            <label for="checkbox">I agree to the turms and conditions</label>    
+
+            <br>
+
+            <!-- <label for="submit">Submit</label>    
+            <input type="submit"> -->
+
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+</html>
